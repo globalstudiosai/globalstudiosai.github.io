@@ -1,0 +1,182 @@
+---
+import Layout from '~/layouts/PageLayout2.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+import Features3 from '~/components/widgets/Features3.astro';
+import Features4 from '~/components/widgets/Features4.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Gen AI for Video Streaming',
+};
+---
+
+
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'Team', href: '#team' },
+        { text: 'Mission', href: '#mission' },
+        { text: 'Contact Us', href: '#contact' },
+      ]}
+      actions={[
+        {
+          text: 'Slide Deck',
+          href: 'https://globalstudiosai.github.io/slide_deck.pdf',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">B2C Saas Video Streaming Platform
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Uses our novel <span class="font-semibold"> Lip Sync Generative AI software </span> to make
+      high quality content.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/7LtWCKDe-hk?si=5mveZ7Lt03Ngv6Cs"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features4
+    title="Team"
+    id="team"
+    subtitle=""
+    items={[
+      {
+        title: 'Nnamdi Adom',
+        description:
+          'AI Engineer at Amazon Lab126 where he builds computer vision models for next gen Amazon devices. Former AI Engineer for CyLab where he helped Walmart automate out of stock detections using autonomous BossaNova robots and deep learning models. He has a Masters in Electrical and Computer Engineering at Carnegie Mellon University',
+        callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: 'https://www.linkedin.com/in/nnamdiadom/',
+        },
+        }
+    ]}
+    image={{
+      src: '~/assets/images/nnamdi.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features4>
+  <Features4
+    title=""
+    id="team"
+    isReversed="True"
+    subtitle=""
+    items={[
+      {
+        title: 'Ammon Lyle',
+        description:
+          '10+ of experience working in content distribution, acquisition, monetization, and streaming. Manager of Content Acquisition at Amazon Prime Video, launched the Fuse+ SVOD platform and the France Channel SVOD streaming platform in the United States and sold major shows like Castle to AEN Cable Netweork for 8 figures.',
+          callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: 'https://www.linkedin.com/in/ammonlyle/',
+        },
+        }
+    ]}
+    image={{
+      src: '~/assets/images/ammon.jpeg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features4>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Mission"
+    id="mission"
+    subtitle="Lip flapping makes dubbed movies/TV shows/animation disengaging. People who watch dubbed foreign movies/TV shows/animation slowly lose interest because the actors’ lips are out of sync with the English dubbed audio. Using generative AI, Global Studios lip syncs the foreign actor to the English audio dub or vice versa. The intended output is to naturally translate movies/TV shows/animation to another language such that the consumer wouldn’t know it’s dubbed. Our mission is to make consumers feel the emotions of the movies/TV shows/animation in their local language."
+    
+  />
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Coming Soon"
+    subtitle="We are working diligently to launch our video streaming platform with high quality content across the world dubbed to English soon"
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+  </Brands>
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Contact Us"
+    id="contact"
+    subtitle=""
+    columns={3}
+    items={[
+      {
+        title: 'Phone',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: 'Call us',
+          href: 'tel:707-690-4895',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Write to us',
+          href: 'mailto:globalstudiosai@gmail.com',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Chat on Linkedin',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Start chatting',
+          href: 'https://www.linkedin.com/in/nnamdiadom/',
+          variant: 'link',
+        },
+      },
+    ]}
+  />
+</Layout>
